@@ -1,0 +1,13 @@
+services:
+
+  libremdb:
+    container_name: libremdb
+    image: quay.io/pussthecatorg/libremdb:latest
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000" # Replace with "3000:3000" if you don't use a reverse proxy
+    environment:
+      - "PORT=3000"
+      - "URL=http://localhost:3000"
+      - "NODE_ENV=production"
+      - "IMAGE_QUALITY=500"
