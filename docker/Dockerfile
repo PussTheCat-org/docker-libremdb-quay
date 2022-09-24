@@ -7,6 +7,7 @@ RUN apt update -y && apt upgrade -y \
     && rm -rf /var/lib/apt/lists/* \
     && npm install -g pnpm \
     && git clone --depth=1 https://github.com/zyachel/libremdb.git . \
+    && pnpm install
     && pnpm build
 EXPOSE 3000
 CMD ["pnpm", "start"]
