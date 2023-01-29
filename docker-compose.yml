@@ -2,7 +2,7 @@ services:
 
   libremdb:
     container_name: libremdb
-    image: quay.io/pussthecatorg/libremdb:latest
+    image: ghcr.io/shindouj/libremdb:latest
     restart: unless-stopped
     depends_on:
       - libremdb-redis
